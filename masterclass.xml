@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/sandersteeghs/Data/Projects/Hart/electronics-masterclass/masterclass/masterclass.kicad_sch</source>
+    <date>2022 February 25, Friday 14:31:01</date>
+    <tool>Eeschema (6.0.2-0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>masterclass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BT1">
+      <value>5V Battery</value>
+      <footprint>Battery:BatteryHolder_Keystone_1042_1x18650</footprint>
+      <libsource lib="Device" part="Battery" description="Multiple-cell battery"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="masterclass.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30fd3123-6275-46c4-8724-5e976ddc81f3</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D1.8mm_W1.8mm_H2.4mm_Horizontal_O6.35mm_Z4.9mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="masterclass.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e55f1fb5-a5c1-4937-be49-338a302b1e09</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>300R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="pspice" part="R" description="Resistor symbol for simulation only"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="masterclass.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d93879c-7f37-4600-af95-cf440da50c29</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="Battery">
+      <description>Multiple-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="R">
+      <description>Resistor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="pspice">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//pspice.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(BT1-Pad1)">
+      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="Net-(BT1-Pad2)">
+      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+    </net>
+    <net code="3" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>
